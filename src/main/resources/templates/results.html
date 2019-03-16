@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" th:href="@{/css/all.min.css}" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <title>Students Results</title>
+</head>
+<body>
+<div class="container-fluid">
+
+    <!-- @Navbar section -->
+    <div th:insert="~{parts/navbar :: navbar}"></div>
+
+    <!-- @Messages section -->
+    <th:block th:insert="~{parts/messages :: messages}"></th:block>
+
+    <!-- @Results table section -->
+    <div th:insert="~{parts/results-table :: resultsTable}" ></div>
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script th:src="@{/js/jquery.min.js}" ></script>
+<script th:src="@{/js/popper.min.js}" ></script>
+<script th:src="@{/js/bootstrap.min.js}" ></script>
+<script th:src="@{/js/all.min.js}"></script>
+<script th:src="@{/js/bootbox.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+</body>
+</html>

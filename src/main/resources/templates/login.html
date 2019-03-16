@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" th:href="@{/css/all.min.css}" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <title>Hello, world!</title>
+</head>
+<body>
+<div class="container-fluid">
+
+    <!-- @Navbar section -->
+    <div th:insert="~{parts/navbar :: navbar}"></div>
+
+    <!-- @Students table section -->
+    <div th:insert="~{parts/login-student-form :: login}" ></div>
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script th:src="@{/js/jquery.min.js}" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script th:src="@{/js/bootstrap.min.js}" ></script>
+<script th:src="@{/js/all.min.js}"></script>
+</body>
+</html>

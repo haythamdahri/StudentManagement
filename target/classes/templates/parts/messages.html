@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<body>
+
+
+<th:block th:fragment="messages">
+
+    <!-- Student not found -->
+    <div class="alert alert-warning" th:if="${param.studentNotFound}">
+        <i class="fas fa-exclamation"></i> Student not found!
+    </div>
+    <!-- Student Updated -->
+    <div class="alert alert-success" th:if="${param.studentUpdated}">
+        <i class="fas fa-check-double"></i> Student updated Successflly
+    </div>
+    <!-- Student Saved -->
+    <div class="alert alert-success" th:if="${param.studentSaved}">
+        <i class="fas fa-check-double"></i> Student saved Successflly
+    </div>
+    <!-- Student Deleted -->
+    <div class="alert alert-success" th:if="${param.studentDeleted}">
+        <i class="fas fa-check-double"></i> Student deleted Successflly
+    </div>
+
+
+    <!-- Results not found -->
+    <div class="alert alert-warning" th:if="${param.resultsNotFound}">
+        <i class="fas fa-exclamation"></i> Results not found!
+    </div>
+    <!-- Results Inserted Or Updated -->
+    <div class="alert alert-success" th:if="${param.resultSaved}">
+        <i class="fas fa-check-double"></i> Result saved Successflly
+    </div>
+    <!-- Results Deleted -->
+    <div class="alert alert-success" th:if="${param.resultDeleted}">
+        <i class="fas fa-check-double"></i> Result deleted Successflly
+    </div>
+
+</th:block>
+
+
+
+</body>
+</html>
