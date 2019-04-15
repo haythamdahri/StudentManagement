@@ -17,12 +17,12 @@
             </thead>
             <tbody>
             <tr th:each="student : ${studentPage.content}">
-                <th scope="row" th:text="${student.id}">...</th>
-                <th scope="row" th:text="${student.firstName}">...</th>
-                <th scope="row" th:text="${student.lastName}">...</th>
-                <th scope="row" th:text="${student.email}">...</th>
-                <th scope="row" th:text="${student.degree}">...</th>
-                <th scope="row" >
+                <td scope="row" th:text="${student.id}">...</td>
+                <td scope="row" th:text="${student.firstName}">...</td>
+                <td scope="row" th:text="${student.lastName}">...</td>
+                <td scope="row" th:text="${student.email}">...</td>
+                <td scope="row" th:text="${student.degree}">...</td>
+                <td scope="row" >
                     <div class="row">
                         <div class="col-md-4 col-sm-12">
                             <form method="POST" id="formid" action="" th:attr="action=@{/delete-student}, id='frm'+${student.id}">
@@ -39,11 +39,11 @@
                             <a th:href="@{'/students/' + ${student.id} + '/results/'}"><button class="btn btn-success btn-sm"><i class="fas fa-eye"></i> Results</button></a>
                         </div>
                     </div>
-                </th>
+                </td>
             </tr>
             <tr th:if="${studentPage.totalElements == 0}">
-                <td cols="5">
-                    <div class="alert alert-warning align-content-center">
+                <td colspan="6">
+                    <div class="alert alert-warning font-weight-bolder text-center">
                         <i class="fas fa-exclamation-triangle"></i> No student found!
                     </div>
                 </td>
